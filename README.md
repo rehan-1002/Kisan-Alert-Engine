@@ -1,6 +1,6 @@
-# Kisan Alert Web (Multilingual AI Soil Telemetry & Farmer Advisories)
+# Kisan Alert Engine (Multilingual AI Soil Telemetry & Farmer Advisories)
 
-Kisan Alert Web is a state-of-the-art agricultural diagnostic portal engineered to assist farmers in real-time. By combining precise meteorological soil telemetry with a multilingual, multimodal AI Chat Interface, the engine diagnoses crop diseases, detects soil abnormalities, and provides direct remedial advisories.
+Kisan Alert Web is a state-of-the-art agricultural diagnostic portal engineered to assist farmers in real-time. By combining precise meteorological soil telemetry with a multilingual, multimodal AI[...]
 
 ## 👥 Engine Developers & Academic Credentials
 
@@ -36,7 +36,7 @@ To prevent downtime from rate limits (HTTP 429) or exhausted developer credits, 
 4.  **Quaternary Fallback:** Cohere AI (using `command-a-03-2025`).
 
 ### 4. Real-Time SSE Stream Parsing
-Features high-performance Server-Sent Events (SSE) stream decoding. As chunks of advisory text flow from the active AI provider, the web client renders the text instantly to ensure zero perceived latency for farmers on low-bandwidth (3G/4G) networks.
+Features high-performance Server-Sent Events (SSE) stream decoding. As chunks of advisory text flow from the active AI provider, the web client renders the text instantly to ensure zero perceived [...]
 
 ### 5. Multilingual Localization
 To assist low-literacy users in diverse agricultural belts, the entire portal adjusts to several regional dialects:
@@ -47,15 +47,15 @@ To assist low-literacy users in diverse agricultural belts, the entire portal ad
 *   Telugu (తెలుగు - Farmer Friend)
 
 ### 6. Cloud Verification Pipeline
-Every diagnostic query, uploaded snapshot, and meteorological telemetry payload is written directly to **Cloud Firestore**. This links farmers directly to Rythu Seva Kendra (RSK) experts for offline validation and human-in-the-loop verify pipelines.
+Every diagnostic query, uploaded snapshot, and meteorological telemetry payload is written directly to **Cloud Firestore**. This links farmers directly to Rythu Seva Kendra (RSK) experts for offli[...]
 
 ---
 
 ## 🛠️ Tech Stack & Dependencies
 
 *   **Frontend Core:** React.js (v18.3), Vite (v5.3) for lightning-fast HMR builds.
-*   **Styling System:** TailwindCSS (v3.4), custom Vanilla CSS variables for premium glassmorphic cards, modern typography (Outfit & Inter fonts), hover micro-animations, and custom scrolling containers.
-*   **AI Integration & Parser:** Direct HTTP stream readers using Web streams APIs (`ReadableStreamDefaultReader` and `TextDecoder`) to handle SSE streams from Gemini, Mistral, OpenRouter, and Cohere.
+*   **Styling System:** TailwindCSS (v3.4), custom Vanilla CSS variables for premium glassmorphic cards, modern typography (Outfit & Inter fonts), hover micro-animations, and custom scrolling cont[...]
+*   **AI Integration & Parser:** Direct HTTP stream readers using Web streams APIs (`ReadableStreamDefaultReader` and `TextDecoder`) to handle SSE streams from Gemini, Mistral, OpenRouter, and Coh[...]
 *   **Database:** Firebase Firestore (Cloud SDK v10.12).
 *   **Icons Library:** Lucide-React.
 
@@ -131,9 +131,8 @@ The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml
 *   *Workflow:* Installs dependencies → Builds with Vite → Uploads `dist/` → Deploys to GitHub Pages
 *   *Live GitHub Pages URL:* **[https://rehan-1002.github.io/Kisan-Alert-Engine/](https://rehan-1002.github.io/Kisan-Alert-Engine/)**
 
-> **Note:** The `base` property in `vite.config.js` is set to `/Kisan-Alert-Engine/` to support the GitHub Pages sub-path. In your repository Settings → Pages, set the Source to **GitHub Actions**.
+> **Note:** The `base` property in `vite.config.js` is set to `/Kisan-Alert-Engine/` to support the GitHub Pages sub-path. In your repository Settings → Pages, set the Source to **GitHub Action[...]
 
 ### Vercel (Secondary)
 *   *Vercel CLI Command:* `vercel --prod`
 *   *Live Production URL:* **[https://kisan-alert-web.vercel.app](https://kisan-alert-web.vercel.app)**
-
