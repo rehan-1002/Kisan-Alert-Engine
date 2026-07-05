@@ -124,6 +124,16 @@ npm run build
 
 ## ☁️ Deployment
 
-The application compiles to a static single-page application (SPA) and is configured for deployment on **Vercel**:
+The application compiles to a static single-page application (SPA) and supports two deployment targets:
+
+### GitHub Pages (Primary)
+The repository includes a GitHub Actions workflow (`.github/workflows/deploy.yml`) that automatically builds and deploys the application on every push to `main`.
+*   *Workflow:* Installs dependencies → Builds with Vite → Uploads `dist/` → Deploys to GitHub Pages
+*   *Live GitHub Pages URL:* **[https://rehan-1002.github.io/Kisan-Alert-Engine/](https://rehan-1002.github.io/Kisan-Alert-Engine/)**
+
+> **Note:** The `base` property in `vite.config.js` is set to `/Kisan-Alert-Engine/` to support the GitHub Pages sub-path. In your repository Settings → Pages, set the Source to **GitHub Actions**.
+
+### Vercel (Secondary)
 *   *Vercel CLI Command:* `vercel --prod`
 *   *Live Production URL:* **[https://kisan-alert-web.vercel.app](https://kisan-alert-web.vercel.app)**
+
