@@ -31,6 +31,12 @@ jobs:
         run: npm ci
       - name: Build Vite App
         run: npm run build
+        env:
+          VITE_GEMINI_API_KEYS: ${{ secrets.VITE_GEMINI_API_KEYS }}
+          VITE_GEMINI_API_KEY: ${{ secrets.VITE_GEMINI_API_KEY }}
+          VITE_MISTRAL_API_KEY: ${{ secrets.VITE_MISTRAL_API_KEY }}
+          VITE_OPENROUTER_API_KEY: ${{ secrets.VITE_OPENROUTER_API_KEY }}
+          VITE_COHERE_API_KEY: ${{ secrets.VITE_COHERE_API_KEY }}
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
