@@ -1,0 +1,11 @@
+{
+  "name": "@firebase/ai-logic",
+  "version": "1.0.0",
+  "description": "Local mock interface for Firebase AI Logic proxy for Gemini 1.5 Flash client-side calls",
+  "main": "index.js",
+  "module": "index.js",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  }
+}
